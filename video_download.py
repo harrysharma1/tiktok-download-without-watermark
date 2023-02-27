@@ -5,12 +5,15 @@ import ssl
 
 
 def download(link,save_name):
+    import requests
+
     cookies = {
         '_ga': 'GA1.2.1581180541.1677273838',
-        '_gid': 'GA1.2.693662015.1677273838',
-        '_gat_UA-3524196-6': '1',
         '__gads': 'ID=c0c12ebb8c07e0d8-2212e44921dc00a5:T=1677273838:RT=1677273838:S=ALNI_MZuPil9BznI8z9UxQqbIFfb834fzA',
-        '__gpi': 'UID=00000bdee1c712fa:T=1677273838:RT=1677273838:S=ALNI_MYxrM9mKkwu18A_wlcscx0rylSj-g',
+        '__cflb': '02DiuEcwseaiqqyPC5reXswsgyrfhBQemh3reA257xoij',
+        '_gid': 'GA1.2.735065766.1677501335',
+        '_gat_UA-3524196-6': '1',
+        '__gpi': 'UID=00000bdee1c712fa:T=1677273838:RT=1677501335:S=ALNI_MYxrM9mKkwu18A_wlcscx0rylSj-g',
     }
 
     headers = {
@@ -18,7 +21,7 @@ def download(link,save_name):
         'accept': '*/*',
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        # 'cookie': '_ga=GA1.2.1581180541.1677273838; _gid=GA1.2.693662015.1677273838; _gat_UA-3524196-6=1; __gads=ID=c0c12ebb8c07e0d8-2212e44921dc00a5:T=1677273838:RT=1677273838:S=ALNI_MZuPil9BznI8z9UxQqbIFfb834fzA; __gpi=UID=00000bdee1c712fa:T=1677273838:RT=1677273838:S=ALNI_MYxrM9mKkwu18A_wlcscx0rylSj-g',
+        # 'cookie': '_ga=GA1.2.1581180541.1677273838; __gads=ID=c0c12ebb8c07e0d8-2212e44921dc00a5:T=1677273838:RT=1677273838:S=ALNI_MZuPil9BznI8z9UxQqbIFfb834fzA; __cflb=02DiuEcwseaiqqyPC5reXswsgyrfhBQemh3reA257xoij; _gid=GA1.2.735065766.1677501335; _gat_UA-3524196-6=1; __gpi=UID=00000bdee1c712fa:T=1677273838:RT=1677501335:S=ALNI_MYxrM9mKkwu18A_wlcscx0rylSj-g',
         'hx-current-url': 'https://ssstik.io/en',
         'hx-request': 'true',
         'hx-target': 'target',
@@ -41,7 +44,7 @@ def download(link,save_name):
     data = {
         'id': link,
         'locale': 'en',
-        'tt': 'UFhIREU3',
+        'tt': 'dDJueGQ3',
     }
 
     response = requests.post('https://ssstik.io/abc', params=params, cookies=cookies, headers=headers, data=data)
